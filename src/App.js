@@ -1,8 +1,13 @@
+import BodyContent from "./components/Body";
+import Header from "./components/Header";
+import "./style/style.css"
+
 function App() {
   return (
-    <div>
-      Hello
-    </div>
+    <>
+      <Header />
+      <BodyContent />
+    </>
   );
 }
 
