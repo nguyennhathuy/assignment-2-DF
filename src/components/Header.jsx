@@ -1,13 +1,13 @@
 function Header() {
     return (
         <header>
-            <div class="logo">
+            <div className="logo">
                 Bookstore
             </div>
 
-            <div class="user">
-                <img class="user__avatar" src="./user-logo.png" />
-                <span class="user__name">Nhat Huy</span>
+            <div className="user">
+                <img className="user__avatar" src="./user-logo.png" />
+                <span className="user__name">Nhat Huy</span>
             </div>
         </header>
     )

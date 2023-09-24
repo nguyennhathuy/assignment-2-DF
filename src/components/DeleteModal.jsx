@@ -1,6 +1,6 @@
-function DeleteModal() {
+function DeleteModal({ isOpenDeleteModal }) {
     return (
-        <div class="modal-delete hide">
+        <div class={`modal-delete ${!isOpenDeleteModal ? "hide" : ""}`}>
             <div class="modal-delete-inner">
                 <div class="modal-delete-inner__header">
                     <span>Delete Book</span>

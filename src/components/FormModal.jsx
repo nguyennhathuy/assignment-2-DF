@@ -1,6 +1,6 @@
-function FormModal() {
+function FormModal({ isOpenAddmodal }) {
     return (
-        <div class="modal-form hide">
+        <div class={`modal-form ${!isOpenAddmodal ? "hide" : ""}`}>
             <div class="modal-form-inner">
                 <div class="modal-form-inner__header">
                     <span>Add Book</span>

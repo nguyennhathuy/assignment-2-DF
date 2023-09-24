@@ -1,4 +1,6 @@
-function DataTable() {
+import DataItem from "./DataItem"
+
+function DataTable({ bookList }) {
     return (
         <div class="data-table">
             <table>
@@ -11,7 +13,9 @@ function DataTable() {
                     </tr>
                 </thead>
                 <tbody>
-
+                    {
+                        bookList.map((item, index) => <DataItem key={index} item={item} />)
+                    }
                 </tbody>
 
             </table>

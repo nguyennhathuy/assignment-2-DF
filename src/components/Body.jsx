@@ -3,16 +3,16 @@ import DeleteModal from "./DeleteModal"
 import FormModal from "./FormModal"
 import SearchBox from "./SearchBox"
 
-function BodyContent() {
+function BodyContent({ bookList, isOpenDeleteModal, isOpenAddmodal }) {
     return (
         <article>
           <SearchBox />
 
-          <DataTable />
+          <DataTable bookList={bookList} />
 
-          <DeleteModal />
+          <DeleteModal isOpenDeleteModal={isOpenDeleteModal}/>
 
-          <FormModal />
+          <FormModal isOpenAddmodal={isOpenAddmodal}/>
           
       </article>
     )
