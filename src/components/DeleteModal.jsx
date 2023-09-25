@@ -1,17 +1,19 @@
-function DeleteModal({ isOpenDeleteModal }) {
+import { MODAL_TYPE } from "../data/enum"
+
+function DeleteModal({ isOpenDeleteModal, toggleModal }) {
     return (
-        <div class={`modal-delete ${!isOpenDeleteModal ? "hide" : ""}`}>
-            <div class="modal-delete-inner">
-                <div class="modal-delete-inner__header">
+        <div className={`modal-delete ${!isOpenDeleteModal ? "hide" : ""}`}>
+            <div className="modal-delete-inner">
+                <div className="modal-delete-inner__header">
                     <span>Delete Book</span>
-                    <img src="./close-icon.png" />
+                    <img src="./close-icon.png" onClick={() => toggleModal(MODAL_TYPE.MODAL_DELETE)}/>
                 </div>
-                <div class="modal-delete-inner__body">
+                <div className="modal-delete-inner__body">
                     Do you want to delete Refactoring book?
                 </div>
-                <div class="modal-delete-inner__footer">
-                    <button class="delete-button">Delete</button>
-                    <button class="cancel-button">Cancel</button>
+                <div className="modal-delete-inner__footer">
+                    <button className="delete-button">Delete</button>
+                    <button className="cancel-button" onClick={() => toggleModal(MODAL_TYPE.MODAL_DELETE)}>Cancel</button>
                 </div>
             </div>
         </div>
