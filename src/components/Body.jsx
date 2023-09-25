@@ -3,16 +3,28 @@ import DeleteModal from "./DeleteModal"
 import FormModal from "./FormModal"
 import SearchBox from "./SearchBox"
 
-function BodyContent({ bookList, isOpenDeleteModal, isOpenAddmodal }) {
+function BodyContent({ bookList, isOpenDeleteModal, isOpenAddmodal, toggleModal, handleCreateBook }) {
     return (
         <article>
-          <SearchBox />
+          <SearchBox 
+            toggleModal={toggleModal}
+          />
 
-          <DataTable bookList={bookList} />
+          <DataTable
+            bookList={bookList} 
+            toggleModal={toggleModal}
+          />
 
-          <DeleteModal isOpenDeleteModal={isOpenDeleteModal}/>
+          <DeleteModal 
+            isOpenDeleteModal={isOpenDeleteModal}
+            toggleModal={toggleModal}
+          />
 
-          <FormModal isOpenAddmodal={isOpenAddmodal}/>
+          <FormModal 
+            isOpenAddmodal={isOpenAddmodal}
+            toggleModal={toggleModal}
+            handleCreateBook={handleCreateBook}
+          />
           
       </article>
     )

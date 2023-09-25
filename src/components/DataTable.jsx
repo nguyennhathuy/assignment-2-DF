@@ -1,8 +1,8 @@
 import DataItem from "./DataItem"
 
-function DataTable({ bookList }) {
+function DataTable({ bookList, toggleModal }) {
     return (
-        <div class="data-table">
+        <div className="data-table">
             <table>
                 <thead>
                     <tr>
@@ -14,7 +14,7 @@ function DataTable({ bookList }) {
                 </thead>
                 <tbody>
                     {
-                        bookList.map((item, index) => <DataItem key={index} item={item} />)
+                        bookList.map((item, index) => <DataItem key={index} item={item} toggleModal={toggleModal} />)
                     }
                 </tbody>
 
