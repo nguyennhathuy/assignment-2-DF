@@ -15,3 +15,14 @@ export const DUMMY_BOOK = [
         topic: "DevOps"
     }
 ];
+
+export const MODAL_TYPE = {
+    MODAL_DELETE: "delete",
+    MODAL_ADD: "add"
+}
+
+export const TOPIC = {
+    PROGRAMMING: "Programming",
+    DATABASE:"Database",
+    DEVOPS: "DevOps"
+}

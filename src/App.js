@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import BodyContent from "./components/Body";
 import Header from "./components/Header";
 import "./style/style.css"
-import { DUMMY_BOOK } from "./data/enum";
+import { DUMMY_BOOK, MODAL_TYPE } from "./data/enum";
 
 function App() {
   const [bookList, setBookList] = useState([]);
@@ -16,6 +16,24 @@ function App() {
       setBookList(JSON.parse(getDatabase))
     }
   }, []);
+  function toggleModal(type, id) {
+    switch(type) {
+      case MODAL_TYPE.MODAL_ADD:
+        setIsOpenAddModal(prev => !prev)
+        break;
+      case MODAL_TYPE.MODAL_DELETE:
+        setIsOpenDeleteModal(prev => !prev)
+        break;
+      default:
+        throw new Error("Type is not valid")
+    }
+  }
+  function handleCreateBook(book) {
+    setBookList(prev => [...prev, book])
+  }
+  function handleDeleteBook(id) {
+    
+  }
   return (
     <>
       <Header />
@@ -23,6 +41,8 @@ function App() {
         bookList={bookList}
         isOpenAddmodal={isOpenAddmodal}
         isOpenDeleteModal={isOpenDeleteModal}
+        toggleModal={toggleModal}
+        handleCreateBook={handleCreateBook}
       />
     </>
   );
