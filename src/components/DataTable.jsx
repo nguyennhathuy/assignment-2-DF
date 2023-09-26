@@ -1,6 +1,6 @@
 import DataItem from "./DataItem"
 
-function DataTable({ bookList, toggleModal }) {
+function DataTable({ bookList, toggleModal, currentPage }) {
     return (
         <div className="data-table">
             <table>
@@ -14,7 +14,7 @@ function DataTable({ bookList, toggleModal }) {
                 </thead>
                 <tbody>
                     {
-                        bookList.map((item, index) => <DataItem key={index} item={item} toggleModal={toggleModal} />)
+                        bookList.slice((currentPage - 1) *  5, currentPage * 5).map((item, index) => <DataItem key={index} item={item} toggleModal={toggleModal} />)
                     }
                 </tbody>
 

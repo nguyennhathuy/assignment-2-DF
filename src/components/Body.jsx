@@ -1,19 +1,21 @@
 import DataTable from "./DataTable"
 import DeleteModal from "./DeleteModal"
 import FormModal from "./FormModal"
+import PagePagination from "./PagePagination"
 import SearchBox from "./SearchBox"
 
-function BodyContent({ bookList, isOpenDeleteModal, isOpenAddmodal, toggleModal, handleCreateBook, handleDeleteBook, handleSearchBook }) {
+function BodyContent({ bookList, isOpenDeleteModal, isOpenAddmodal, toggleModal, handleCreateBook, handleDeleteBook, handleSearchBook, currentPage, handleSwitchPage }) {
     return (
-        <article>
+        <main>
           <SearchBox 
             toggleModal={toggleModal}
             handleSearchBook={handleSearchBook}
           />
 
           <DataTable
-            bookList={bookList} 
+            bookList={bookList}
             toggleModal={toggleModal}
+            currentPage={currentPage}
           />
 
           <DeleteModal 
@@ -27,8 +29,13 @@ function BodyContent({ bookList, isOpenDeleteModal, isOpenAddmodal, toggleModal,
             toggleModal={toggleModal}
             handleCreateBook={handleCreateBook}
           />
-          
-      </article>
+
+          <PagePagination 
+            bookList={bookList}
+            currentPage={currentPage}
+            handleSwitchPage={handleSwitchPage}
+          />
+      </main>
     )
 }
 
