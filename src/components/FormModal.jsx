@@ -1,11 +1,16 @@
 import { useState } from "react";
 import { MODAL_TYPE, TOPIC } from "../data/enum"
+import { idGenerator } from "../utils/utils"
 
 function FormModal({ isOpenAddmodal, toggleModal, handleCreateBook }) {
-    const [book, setBook] = useState({});
+    const [book, setBook] = useState({
+        name: '',
+        author: '',
+        topic: ''
+    });
     function handleSubmit(event) {
         event.preventDefault()
-        handleCreateBook(book)
+        handleCreateBook({...book, id: idGenerator()})
         setBook(prev => ({
             ...prev,
             name: '',
