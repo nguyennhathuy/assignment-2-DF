@@ -6,7 +6,7 @@ function PagePagination({ bookList, currentPage, handleSwitchPage }) {
                     const numbers = [];
                     for (let i = 0; i < Math.ceil(bookList.length / 5); i++) {
                         numbers.push(<a 
-                                        href="#" 
+                                        href="/#" 
                                         key={i} 
                                         className={currentPage === i + 1 ? "active" : ""}
                                         onClick={() => handleSwitchPage(i + 1)}
