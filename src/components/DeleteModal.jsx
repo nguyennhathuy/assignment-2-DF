@@ -1,6 +1,10 @@
 import { MODAL_TYPE } from "../data/enum"
 
-function DeleteModal({ isOpenDeleteModal, toggleModal }) {
+function DeleteModal({ isOpenDeleteModal, toggleModal, handleDeleteBook }) {
+    function handleDeleteButton() {
+        handleDeleteBook()
+        toggleModal(MODAL_TYPE.MODAL_DELETE)
+    }
     return (
         <div className={`modal-delete ${!isOpenDeleteModal ? "hide" : ""}`}>
             <div className="modal-delete-inner">
@@ -12,7 +16,7 @@ function DeleteModal({ isOpenDeleteModal, toggleModal }) {
                     Do you want to delete Refactoring book?
                 </div>
                 <div className="modal-delete-inner__footer">
-                    <button className="delete-button">Delete</button>
+                    <button className="delete-button" onClick={handleDeleteButton}>Delete</button>
                     <button className="cancel-button" onClick={() => toggleModal(MODAL_TYPE.MODAL_DELETE)}>Cancel</button>
                 </div>
             </div>
