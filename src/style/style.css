@@ -267,3 +267,40 @@ html {
 .pagination a:hover:not(.active) {
     background-color: #ddd;
 }
+
+input[type="checkbox"] {
+    position: relative;
+    width: 40px;
+    height: 20px;
+    appearance: none;
+    background-color: #C5D0DA;
+    border-radius: 10px;
+    margin-right: 5px;
+    transition: .3s;
+    cursor: pointer;
+}
+input:checked[type="checkbox"] {
+    background-color:#D2445C
+}
+
+input[type="checkbox"]::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    transform: scale(0.9);
+    transition: .3s
+}
+
+input:checked[type="checkbox"]:before {
+    left: 20px;
+}
+
+.switch-dark-mode {
+    display: flex;
+    align-items: center;
+}
