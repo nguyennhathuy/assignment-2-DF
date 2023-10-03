@@ -279,6 +279,7 @@ input[type="checkbox"] {
     transition: .3s;
     cursor: pointer;
 }
+
 input:checked[type="checkbox"] {
     background-color:#D2445C
 }
