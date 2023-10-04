@@ -16,6 +16,7 @@ function App() {
     }
     setBookList(JSON.parse(localStorage.getItem("bookList")))
   }, []);
+  
   function toggleModal(type, id) {
     switch(type) {
       case MODAL_TYPE.MODAL_ADD:
