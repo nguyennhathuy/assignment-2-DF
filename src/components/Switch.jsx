@@ -4,7 +4,6 @@ function Switch() {
             <input type="checkbox" id="switch"/>
             <span>Dark mode</span>
         </label>
-        
     )
 }
 
