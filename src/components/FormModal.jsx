@@ -17,6 +17,7 @@ function FormModal({ isOpenAddmodal, toggleModal, handleCreateBook }) {
             author: '',
             topic: ''
         }))
+        
         toggleModal(MODAL_TYPE.MODAL_ADD)
     }
     function handleChange(event) {
