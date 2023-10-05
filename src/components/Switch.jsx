@@ -6,5 +6,4 @@ function Switch() {
         </label>
     )
 }
-
 export default Switch
