@@ -7,6 +7,7 @@ function FormModal({ isOpenAddmodal, toggleModal, handleCreateBook }) {
         name: '',
         author: '',
         topic: ''
+        
     });
     function handleSubmit(event) {
         event.preventDefault()
