@@ -7,6 +7,7 @@ function Header() {
                 Bookstore
             </div>
 
+
             <div className="user">
                 <Switch />
                 <img className="user__avatar" src="./user-logo.png" />
