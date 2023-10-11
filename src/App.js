@@ -23,6 +23,7 @@ function App() {
         setIsOpenAddModal(prev => !prev)
         break;
         
+        
       case MODAL_TYPE.MODAL_DELETE:
         setIsOpenDeleteModal(prev => !prev)
         if (id) {
