@@ -5,5 +5,6 @@ function Switch() {
             <span>Dark mode</span>
         </label>
     )
+    
 }
 export default Switch
